@@ -1,226 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TRASH RIOT — 쓰레기를 떠넘기고 보상금을 쟁탈하는 3D PvP 전략 슈팅 게임">
-  <title>TRASH RIOT — Waste. Fight. Profit.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#121827">
+  <meta name="description" content="Trash Riot — 악덕 시장이 되어 쓰레기를 떠넘기고 보상금을 차지하는 3D 1인칭 PvP 전략 슈팅 게임. 게임 소개와 트레일러를 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="TRASH RIOT | 쓰레기를 떠넘겨라!">
+  <meta property="og:description" content="쓰레기를 던져라. 도시를 지켜라. 보상금을 차지하라!">
+  <meta property="og:image" content="https://mongknock.github.io/trashriot/assets/hero.png">
+  <meta property="og:url" content="https://mongknock.github.io/trashriot/">
+  <link rel="canonical" href="https://mongknock.github.io/trashriot/">
+  <link rel="icon" type="image/png" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/game-icon.png">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20261119d">
+  <title>TRASH RIOT — 게임 공식 홈페이지</title>
+  <script defer src="script.js?v=20261119d"></script>
 </head>
 <body>
-
-  <div class="noise"></div>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Trash Riot home">
-      <img src="assets/logo.png" alt="Trash Riot logo">
-    </a>
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#howto">HOW TO PLAY</a>
-      <a href="#system">SYSTEM</a>
-      <a href="#screenshots">SCREENSHOTS</a>
-      <a href="#download">PLAY</a>
-      <a href="#team">TEAM</a>
-    </nav>
-    <button class="menu-btn" aria-label="메뉴 열기">☰</button>
+  <a class="skip-link" href="#content">본문 바로가기</a>
+  <header class="header" id="top">
+    <div class="header-inner shell">
+      <a class="header-brand" href="#top" aria-label="Trash Riot 메인으로">
+        <span class="brand-mark" aria-hidden="true">TR</span>
+        <span>TRASH RIOT</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="navigation" id="main-navigation" aria-label="주 메뉴">
+        <a href="#about">게임 소개</a>
+        <a href="#howto">플레이 방법</a>
+        <a href="#modes">게임 모드</a>
+        <a href="#trailer">트레일러</a>
+        <a href="#gallery">스크린샷</a>
+        <a href="#team">개발팀</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content reveal">
-        <div class="alert-tag">⚠ GOVERNMENT CLEANLINESS SYSTEM // UNSTABLE</div>
-        <h1>TRASH<br><span>RIOT</span></h1>
-        <p class="hero-copy">쓰레기를 떠넘겨라.<br>보상금을 차지하라.</p>
-        <div class="hero-buttons">
-          <a href="#download" class="btn btn-primary">▶ PLAY NOW</a>
-          <a href="#trailer" class="btn btn-ghost">WATCH TRAILER</a>
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="shell hero-layout">
+        <div class="hero-media">
+          <picture>
+            <source type="image/webp" srcset="assets/hero-960.webp 960w, assets/hero-1600.webp 1600w" sizes="100vw">
+            <img src="assets/hero.png" alt="두 악덕 시장이 쓰레기 대포를 들고 대치하는 도시와 중앙의 TRASH RIOT 로고" width="2048" height="1152" fetchpriority="high" decoding="async">
+          </picture>
         </div>
-      </div>
-      <div class="hero-stamp">CITY<br>CLEANLINESS<br>PROGRAM</div>
-      <div class="scroll-cue">SCROLL TO RIOT ↓</div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="section-kicker">01 / ABOUT THE RIOT</div>
-      <div class="about-grid">
-        <div>
-          <h2>WELCOME TO<br><em>THE TRASH WAR.</em></h2>
-        </div>
-        <div class="about-copy">
-          <p class="lead">악덕시장이 되어 쓰레기를 모아 상대 도시로 보내고, 도시 청결 보상금을 쟁탈하세요.</p>
-          <p>정부의 새로운 청결 보상 제도를 악용한 시장들이 등장했습니다. 쓰레기를 흡입하고 발사하며 상대 도시의 청결도를 무너뜨리고, 더 많은 재화를 확보하는 것이 목표입니다.</p>
-          <div class="game-tags">
-            <span>3D PVP</span><span>STRATEGY</span><span>SHOOTER</span><span>PC</span><span>1st PERSON</span>
+        <div class="hero-content">
+          <p class="eyebrow"><span class="status-dot"></span> 2026 · IN DEVELOPMENT</p>
+          <h1 id="hero-heading">도시를<br><span>더럽혀라!</span></h1>
+          <p class="hero-lead">쓰레기를 떠넘겨라.<br>보상금을 차지하라!</p>
+          <p class="hero-description">두 악덕 시장이 펼치는 기상천외한 쓰레기 전쟁! <strong>TRASH RIOT</strong>에서 친구와 한판 승부를 벌여보세요.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#trailer">▶ 공식 트레일러 보기</a>
+            <a class="button button-outline" href="#gallery">게임 화면 보기 ↓</a>
+          </div>
+          <div class="hero-tags" aria-label="게임 정보">
+            <span>3D · 1인칭</span><span>전략 슈팅</span><span>2인 PvP</span><span>PC</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="howto" class="section howto">
-      <div class="section-kicker">02 / HOW TO PLAY</div>
-      <h2>MAKE A MESS.<br><em>GET PAID.</em></h2>
-
-      <div class="how-grid">
-        <article class="how-card">
-          <div class="num">01</div>
-          <div>
-            <h3>COLLECT</h3>
-            <p>도시 곳곳의 쓰레기를 흡입하세요.</p>
-          </div>
-        </article>
-        <article class="how-card">
-          <div class="num">02</div>
-          <div>
-            <h3>THROW</h3>
-            <p>모은 쓰레기를 상대 도시로 발사해 재화를 빼앗으세요.</p>
-          </div>
-        </article>
-        <article class="how-card">
-          <div class="num">03</div>
-          <div>
-            <h3>RECYCLE</h3>
-            <p>분리수거 이벤트에서 빠르게 쓰레기를 분류하고 보상을 획득하세요.</p>
-          </div>
-        </article>
-        <article class="how-card">
-          <div class="num">04</div>
-          <div>
-            <h3>WIN</h3>
-            <p>청결도와 재화를 관리해 최종 승리를 차지하세요.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="system" class="section system">
-      <div class="section-kicker">03 / SYSTEM</div>
-      <div class="system-header">
-        <h2>THE DIRTY<br><em>RULES.</em></h2>
-        <p>깨끗하게 이길 생각은 하지 마세요.</p>
-      </div>
-      <div class="system-grid">
-        <article>
-          <span class="system-icon">◉</span>
-          <h3>CITY CLEANLINESS</h3>
-          <p>도시 청결도를 관리하고 정부 평가에서 보상금을 획득합니다.</p>
-        </article>
-        <article>
-          <span class="system-icon">₩</span>
-          <h3>CURRENCY</h3>
-          <p>쓰레기 공격과 소각 등으로 재화를 확보하고 먼저 목표에 도달하세요.</p>
-        </article>
-        <article>
-          <span class="system-icon">♻</span>
-          <h3>RECYCLING EVENT</h3>
-          <p>특별 이벤트에서 빠르게 분리수거해 보너스를 가져가세요.</p>
-        </article>
-        <article>
-          <span class="system-icon">!</span>
-          <h3>ITEMS</h3>
-          <p>청결도, 속도, 소각 등 다양한 아이템으로 전세를 뒤집으세요.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="screenshots" class="section screenshots">
-      <div class="section-kicker">04 / GAMEPLAY</div>
-      <div class="screen-heading">
-        <h2>SEE THE<br><em>RIOT.</em></h2>
-        <p>게임 속 쓰레기 전쟁을 직접 확인하세요.</p>
-      </div>
-      <div class="gallery">
-        <figure class="wide reveal"><img src="assets/trash-throw.png" alt="쓰레기를 던지는 게임플레이"></figure>
-        <figure class="reveal"><img src="assets/incineration.png" alt="쓰레기 소각 게임플레이"></figure>
-        <figure class="reveal"><img src="assets/recycling-event.png" alt="분리수거 이벤트"></figure>
-        <figure class="wide reveal"><img src="assets/government-evaluation.png" alt="정부 도시 평가"></figure>
-        <figure class="reveal"><img src="assets/trash-hit.png" alt="쓰레기 피격 장면"></figure>
-        <figure class="reveal"><img src="assets/victory.png" alt="승리 화면"></figure>
-      </div>
-    </section>
-
-    <section id="trailer" class="section trailer">
-      <div class="section-kicker">05 / TRAILER</div>
-      <div class="trailer-heading">
-        <h2>WATCH THE<br><em>RIOT.</em></h2>
-        <p>Trash Riot의 게임 트레일러를 확인하세요.</p>
-      </div>
-      <div class="video-frame">
-        <video controls preload="metadata" poster="assets/hero.png">
-          <source src="assets/trash-riot-trailer.mp4" type="video/mp4">
-          브라우저가 동영상 재생을 지원하지 않습니다.
-        </video>
-      </div>
-    </section>
-
-    <section id="download" class="section download">
-      <div class="download-card">
-        <div class="section-kicker">06 / PLAY TRASH RIOT</div>
-        <h2>READY TO<br><em>RIOT?</em></h2>
-        <p>Windows에서 Trash Riot을 플레이하세요.</p>
-        <div class="download-meta">
-          <span>PLATFORM <b>WINDOWS PC</b></span>
-          <span>VERSION <b>V1.0</b></span>
-          <span>BUILD <b>COMING SOON</b></span>
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="shell">
+        <p class="section-label">01 / ABOUT</p>
+        <div class="section-head">
+          <h2 id="about-heading">깨끗한 도시?<br><span>그건 남이 하면 되지!</span></h2>
+          <p class="lead">정부가 깨끗한 도시에 보상금을 준다고 발표하자, 악덕 시장들은 엉뚱한 계획을 세웠습니다.</p>
         </div>
-        <a class="btn btn-primary big" href="https://github.com/mongknock/trashriot/releases/download/v1.0/TrashRiot_Windows_v1.0.zip" id="downloadBtn">↓ DOWNLOAD GAME</a>
-        <p class="download-note">※ Trash Riot Windows Build v1.0 구미대학교 졸업작품 Trash Riot Windows 빌드입니다. 압축 해제 후 TrashRiot.exe를 실행해 주세요. </p>
+        <div class="about-highlight">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>우리 도시의 쓰레기를<br><strong>옆 도시로 던져버리면 되잖아?!</strong></p>
+        </div>
+        <p class="section-description">쓰레기를 수거하고 상대 도시에 투척하거나 소각해 청결도와 재화를 관리하세요. 정부 평가에서 더 많은 보상금을 확보하는 시장이 승리합니다!</p>
+        <div class="feature-pills"><span>수거</span><span>투척</span><span>소각</span><span>정부 평가</span></div>
       </div>
     </section>
 
-    <section id="team" class="section team">
-      <div class="section-kicker">07 / THE TEAM</div>
-      <div class="team-grid">
-        <div class="team-intro">
-          <img class="team-logo" src="assets/team-logo.png" alt="WANNA PLAY 팀 로고">
-          <h2>WHO MADE<br><em>THIS MESS?</em></h2>
+    <section class="section howto" id="howto" aria-labelledby="howto-heading">
+      <div class="shell">
+        <p class="section-label">02 / HOW TO PLAY</p>
+        <div class="section-head">
+          <h2 id="howto-heading">쓰레기로 싸우는 법</h2>
+          <p>간단하지만 절대 평범하지 않은 시장들의 싸움!</p>
         </div>
-        <div class="team-copy">
-          <p class="lead">TRASH RIOT TEAM</p>
-          <p>2026 Graduation Exhibition<br>Gumi University · Visual Game Contents School</p>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-num">01</span><div class="step-emoji" aria-hidden="true">🧹</div><h3>쓰레기 수거</h3><p>도시 곳곳에 널린 쓰레기를 빠르게 모으세요. 아이템도 활용할 수 있어요.</p></article>
+          <article class="step-card"><span class="step-num">02</span><div class="step-emoji" aria-hidden="true">💥</div><h3>상대 도시로 투척</h3><p>쓰레기를 던져 상대 도시를 어지럽히고 재화를 획득하세요.</p></article>
+          <article class="step-card"><span class="step-num">03</span><div class="step-emoji" aria-hidden="true">🔥</div><h3>쓰레기 소각</h3><p>모은 쓰레기를 소각해 도시 청결도를 회복하세요. 분리수거에도 도전!</p></article>
+          <article class="step-card"><span class="step-num">04</span><div class="step-emoji" aria-hidden="true">💰</div><h3>정부 평가</h3><p>도시의 청결도를 관리하고 보상금 경쟁에서 이기세요.</p></article>
+        </div>
+      </div>
+    </section>
 
-          <div class="member-card">
-            <div class="member-number">01</div>
-            <div>
-              <h3>박서현</h3>
-              <p>기획 · 모든 그래픽 · 운영 · 총괄</p>
-              <div class="role-list">
-                <span>GAME PLANNING</span><span>ALL GRAPHICS</span><span>OPERATION</span><span>PRODUCER</span>
-              </div>
+    <section class="section modes" id="modes" aria-labelledby="modes-heading">
+      <div class="shell">
+        <p class="section-label">03 / GAME MODES</p>
+        <div class="section-head">
+          <h2 id="modes-heading">취향대로 즐기는<br><span>쓰레기 대전!</span></h2>
+          <p>전략적으로 플레이하거나, 완전히 난장판을 만들어보세요.</p>
+        </div>
+        <div class="mode-grid">
+          <article class="mode-card mode-normal">
+            <div class="mode-top"><span class="mode-tag">NORMAL MODE</span><span class="mode-icon" aria-hidden="true">♻</span></div>
+            <h3>일반 모드</h3>
+            <p>수거, 투척, 소각, 평가를 활용해 재화와 청결도를 관리하는 전략 승부!</p>
+            <span class="mode-foot">전략 & 심리전</span>
+          </article>
+          <article class="mode-card mode-chaos">
+            <div class="mode-top"><span class="mode-tag">CHAOS MODE</span><span class="mode-icon" aria-hidden="true">⚡</span></div>
+            <h3>대난장판 모드</h3>
+            <p>특별한 능력과 예측할 수 없는 돌발상황으로 전장이 뒤집히는 유쾌한 난투!</p>
+            <span class="mode-foot">특수 능력 & 돌발상황</span>
+          </article>
+        </div>
+        <p class="small-note">※ 소개된 콘텐츠는 개발 상황에 따라 변경될 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="section trailer-section" id="trailer" aria-labelledby="trailer-heading">
+      <div class="shell">
+        <p class="section-label">04 / OFFICIAL VIDEOS</p>
+        <div class="section-head">
+          <h2 id="trailer-heading">영상으로 만나는 <span>Trash Riot!</span></h2>
+          <p>악덕 시장들의 쓰레기 전쟁을 영상으로 만나보세요. 재생 버튼을 누르면 영상이 로드됩니다.</p>
+        </div>
+        <div class="videos-grid">
+          <article class="video-card video-card-featured">
+            <div class="video-card-top"><span class="video-card-label">★ MAIN VIDEO · OFFICIAL TRAILER</span><span class="video-runtime">01:22</span></div>
+            <div class="video-frame" data-video-src="assets/videos/trash-riot-trailer.mp4" data-video-title="Trash Riot 공식 트레일러" data-video-poster="assets/trailer-poster.webp">
+              <button class="video-launch" type="button" aria-label="Trash Riot 공식 트레일러 재생하기">
+                <img src="assets/trailer-poster.webp" alt="" loading="lazy" decoding="async" width="960" height="540">
+                <span class="video-play-mark" aria-hidden="true">▶</span><span class="video-launch-caption" aria-hidden="true">눌러서 트레일러 재생</span>
+              </button>
             </div>
-          </div>
-
-          <div class="member-card">
-            <div class="member-number">02</div>
-            <div>
-              <h3>김광철</h3>
-              <p>기획 · 모든 프로그래밍 · 게임 밸런싱</p>
-              <div class="role-list">
-                <span>GAME PLANNING</span><span>PROGRAMMING</span><span>GAME BALANCE</span>
-              </div>
+            <div class="video-card-copy"><div><h3>Trash Riot 공식 트레일러</h3><p>정부의 청결 보상 제도와 두 악덕 시장이 벌이는 기상천외한 쓰레기 전쟁!</p></div><span class="video-highlight">대표 영상</span></div>
+            <noscript><p class="video-fallback">동영상 보기: <a href="assets/videos/trash-riot-trailer.mp4">공식 트레일러 직접 열기</a></p></noscript>
+          </article>
+          <article class="video-card video-card-secondary">
+            <div class="video-card-top"><span class="video-card-label">GAMEPLAY VIDEO</span><span class="video-runtime">01:06</span></div>
+            <div class="video-frame" data-video-src="assets/videos/trash-riot-gameplay.mp4" data-video-title="Trash Riot 플레이 홍보 영상" data-video-poster="assets/gameplay-poster.webp">
+              <button class="video-launch" type="button" aria-label="Trash Riot 게임 플레이 홍보 영상 재생하기">
+                <img src="assets/gameplay-poster.webp" alt="" loading="lazy" decoding="async" width="960" height="540">
+                <span class="video-play-mark" aria-hidden="true">▶</span><span class="video-launch-caption" aria-hidden="true">눌러서 플레이 영상 재생</span>
+              </button>
             </div>
+            <div class="video-card-copy"><div><h3>게임 플레이 홍보 영상</h3><p>쓰레기 투척, 소각, 분리수거와 정부 평가까지! 실제 플레이를 자세히 소개합니다.</p></div></div>
+            <noscript><p class="video-fallback">동영상 보기: <a href="assets/videos/trash-riot-gameplay.mp4">플레이 홍보 영상 직접 열기</a></p></noscript>
+          </article>
+        </div>
+        <p class="video-note">* 영상은 자동 재생되지 않으며, 재생을 선택한 영상만 불러옵니다. 모바일에서는 데이터 사용량에 유의해 주세요.</p>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="shell">
+        <p class="section-label">05 / GAMEPLAY</p>
+        <div class="section-head">
+          <h2 id="gallery-heading">게임 속 <span>대난장판</span></h2>
+          <p>실제 게임 플레이 화면 8장을 만나보세요. 사진을 누르면 크게 볼 수 있어요!</p>
+        </div>
+        <p class="gallery-hint"><span aria-hidden="true">←</span> 모바일에서는 옆으로 밀어보세요 <span aria-hidden="true">→</span></p>
+        <div class="gallery" aria-label="게임 스크린샷 8장">
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="0" aria-label="01 쓰레기 투척 스크린샷 크게 보기">
+              <img src="assets/trash-throw-960.webp" srcset="assets/trash-throw-960.webp 960w, assets/trash-throw-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="노란 쓰레기 대포를 들고 도시의 쓰레기를 겨누는 1인칭 게임플레이 화면" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">01 / 쓰레기 투척</span><span class="gallery-card-desc">상대 도시로 쓰레기를 던져 보상금을 차지하세요.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="1" aria-label="02 쓰레기 소각 스크린샷 크게 보기">
+              <img src="assets/incineration-960.webp" srcset="assets/incineration-960.webp 960w, assets/incineration-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="게임 화면에 일반 쓰레기 소각 진행 막대와 소각장이 표시된 모습" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">02 / 쓰레기 소각</span><span class="gallery-card-desc">쓰레기를 소각하고 도시의 청결도를 회복하세요.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="2" aria-label="03 분리수거 이벤트 스크린샷 크게 보기">
+              <img src="assets/recycling-event-960.webp" srcset="assets/recycling-event-960.webp 960w, assets/recycling-event-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="종이와 플라스틱 등 분리수거 대상이 아이콘으로 표시된 게임 화면" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">03 / 분리수거 이벤트</span><span class="gallery-card-desc">종류별로 분리수거하며 추가 보상을 노려보세요.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="3" aria-label="04 정부 도시 평가 스크린샷 크게 보기">
+              <img src="assets/government-evaluation-960.webp" srcset="assets/government-evaluation-960.webp 960w, assets/government-evaluation-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="정부 도시 평가 결과에서 청결도 69퍼센트와 100퍼센트가 비교된 화면" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">04 / 정부 도시 평가</span><span class="gallery-card-desc">정부 평가에서 두 도시의 청결도와 보상금을 비교합니다.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="4" aria-label="05 아이템 사용 스크린샷 크게 보기">
+              <img src="assets/items-960.webp" srcset="assets/items-960.webp 960w, assets/items-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="무기 앞에 아이템이 표시되고 도시 전투가 펼쳐지는 장면" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">05 / 아이템 사용</span><span class="gallery-card-desc">다양한 아이템을 활용해 전세를 뒤집어보세요.</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="5" aria-label="06 쓰레기 피격 스크린샷 크게 보기">
+              <img src="assets/trash-hit-960.webp" srcset="assets/trash-hit-960.webp 960w, assets/trash-hit-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="게임 화면 가장자리에 초록색 오염 이펙트가 퍼진 장면" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">06 / 쓰레기 피격</span><span class="gallery-card-desc">상대의 공격을 받으면 시야가 엉망진창!</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="6" aria-label="07 승리 스크린샷 크게 보기">
+              <img src="assets/victory-960.webp" srcset="assets/victory-960.webp 960w, assets/victory-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="WIN 승리 결과 화면과 두 플레이어의 최종 재화가 표시된 모습" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">07 / 승리</span><span class="gallery-card-desc">최종 재화와 청결도를 겨뤄 승리를 쟁취하세요!</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <button class="screenshot-open" type="button" data-index="7" aria-label="08 패배 스크린샷 크게 보기">
+              <img src="assets/defeat-960.webp" srcset="assets/defeat-960.webp 960w, assets/defeat-1920.webp 1920w" sizes="(min-width: 900px) 560px, 84vw" alt="LOSE 패배 결과 화면과 두 플레이어의 최종 재화가 표시된 모습" loading="lazy" decoding="async" width="1920" height="1080">
+              <span class="zoom-badge" aria-hidden="true">⤢ 확대</span>
+            </button>
+            <figcaption><span class="gallery-card-name">08 / 패배</span><span class="gallery-card-desc">마지막 평가까지 방심은 금물!</span></figcaption>
+          </figure>
+        </div>
+        <p class="gallery-subnote">* 개발 중인 게임 화면으로, 최종 출시 버전과 일부 다를 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="section coming" aria-labelledby="coming-heading">
+      <div class="shell coming-inner">
+        <span class="coming-mark" aria-hidden="true">TR</span>
+        <p class="section-label">CURRENTLY IN DEVELOPMENT</p>
+        <h2 id="coming-heading">다음 난장판을 준비 중!</h2>
+        <p>《Trash Riot》은 현재 개발 중입니다.<br>최신 게임 소식은 공식 인스타그램에서 확인해 주세요.</p>
+        <a class="button button-dark" href="https://www.instagram.com/trash.riot/" target="_blank" rel="noopener noreferrer">공식 인스타그램 보기 ↗</a>
+      </div>
+    </section>
+
+    <section class="section team-section" id="team" aria-labelledby="team-heading">
+      <div class="shell">
+        <p class="section-label">06 / OUR TEAM</p>
+        <div class="section-head"><h2 id="team-heading">이 난장판을 만든 사람들</h2><p>구미대학교 비주얼게임컨텐츠스쿨 졸업작품 프로젝트</p></div>
+        <div class="team-grid">
+          <div class="team-brand"><span class="team-brand-big">WANNA PLAY</span><span>TRASH RIOT · GAME PROJECT</span></div>
+          <div class="members">
+            <article class="member"><span class="member-number">01</span><div><h3>박서현</h3><p>기획 · 그래픽 · 운영 · 총괄</p></div></article>
+            <article class="member"><span class="member-number">02</span><div><h3>김광철</h3><p>기획 · 프로그래밍 · 게임 밸런싱</p></div></article>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <div class="footer-logo"><img src="assets/game-icon.png" alt="Trash Riot game icon"></div>
-    <div>
-      <strong>TRASH RIOT</strong>
-      <p>WASTE. FIGHT. PROFIT.</p>
+  <dialog class="lightbox" aria-label="게임 스크린샷 확대 보기">
+    <div class="lightbox-body">
+      <button class="lightbox-close" type="button" aria-label="확대 보기 닫기">×</button>
+      <img class="lightbox-image" alt="" width="1920" height="1080">
+      <div class="lightbox-bottom">
+        <button class="lightbox-prev" type="button" aria-label="이전 스크린샷">←</button>
+        <div><strong class="lightbox-title"></strong><span class="lightbox-count" aria-live="polite"></span></div>
+        <button class="lightbox-next" type="button" aria-label="다음 스크린샷">→</button>
+      </div>
     </div>
-    <div class="footer-right">2026 GRADUATION EXHIBITION</div>
-  </footer>
+  </dialog>
 
-  <script src="script.js?v=2"></script>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div><strong>TRASH RIOT</strong><p>WASTE. FIGHT. PROFIT.</p></div>
+      <a href="https://www.instagram.com/trash.riot/" target="_blank" rel="noopener noreferrer" aria-label="Trash Riot 공식 인스타그램 방문">INSTAGRAM ↗</a>
+      <small>© 2026 TRASH RIOT</small>
+    </div>
+  </footer>
 </body>
 </html>
