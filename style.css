@@ -255,3 +255,40 @@ h1 span { color:#fff; text-shadow:2px 2px var(--ink),-2px -2px var(--ink),2px -2
 @media(min-width:600px){.video-card-top{padding:13px 18px;}.video-card-copy{padding:20px 23px 23px;}.video-card-copy h3{font-size:22px;}.video-card-copy p{font-size:14px;}.video-play-mark{width:78px;height:78px;font-size:30px;}}
 @media(min-width:900px){.video-card-secondary{max-width:850px;width:100%;margin-inline:auto;}.video-play-mark{width:84px;height:84px;}}
 @media(prefers-reduced-motion:reduce){.video-play-mark{transition:none;}}
+/* Trash Riot 실제 로고 */
+.header-logo {
+  display: block;
+  width: auto;
+  height: 44px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 모바일 로고 크기 */
+@media (max-width: 600px) {
+  .header-logo {
+    height: 34px;
+  }
+}
+
+/* 게임 스크린샷 비율 수정 */
+.gallery .screenshot-open {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* 이미지가 빈 공간 없이 채워지도록 */
+.gallery .screenshot-open > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain;
+}
